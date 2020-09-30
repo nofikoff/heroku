@@ -11,7 +11,7 @@ if ($_REQUEST) {
 ?>
 
 
-<form name="profile" >
+<form name="profile" method="post" >
     <div><label for="name">ФИО</label><input type="text" aria-invalid="false"/></div>
     <div><label for="position">Должность</label><input readonly="readonly" type="text" aria-invalid="false"/></div>
     <div>
