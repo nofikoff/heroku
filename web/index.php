@@ -26,9 +26,14 @@ $statement->bindValue(':name', 'ПЕТЯ');
 $statement->bindValue(':phone', '22222');
 $statement->bindValue(':email', 'xxxxxxx');
 
-
+try {
 //Execute the statement and insert our values.
-$inserted = $statement->execute();
+    $inserted = $statement->execute();
+
+} catch (Exception $exception) {
+    print_r($exception);
+
+}
 
 
 //Because PDOStatement::execute returns a TRUE or FALSE value,
