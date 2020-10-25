@@ -17,24 +17,16 @@ $pdo = new PDO("mysql:host=$host;dbname=$database", $user, $pass, $options);
 
 
 //Create our INSERT SQL query.
-$sql = "INSERT INTO `test_table` (`id`, `name`, `phone`, `email`) VALUES (NULL, :name, :phone, :email);";
+$sql = "SELECT * FROM `test_table` WHERE id = ".$_GET['id'];
 
 //Prepare our statement.
 $statement = $pdo->prepare($sql);
-//Bind our values to our parameters (we called them :make and :model).
-$statement->bindValue(':name', 'ПЕТЯ');
-$statement->bindValue(':phone', '22222');
-$statement->bindValue(':email', 'xxxxxxx');
-
-
 //Execute the statement and insert our values.
 $inserted = $statement->execute();
 
+print_r($inserted);
 
 //Because PDOStatement::execute returns a TRUE or FALSE value,
 //we can easily check to see if our insert was successful.
-if ($inserted) {
-    echo 'Row inserted!<br>';
-}
 
 
