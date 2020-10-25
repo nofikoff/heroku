@@ -19,12 +19,9 @@ $pdo = new PDO("mysql:host=$host;dbname=$database", $user, $pass, $options);
 //Create our INSERT SQL query.
 $sql = "SELECT * FROM `test_table` WHERE id = ".$_GET['id'];
 
-//Prepare our statement.
-$statement = $pdo->prepare($sql);
-//Execute the statement and insert our values.
-$inserted = $statement->execute();
-
-print_r($inserted);
+foreach($pdo->query($sql, PDO::FETCH_ASSOC) as $row){
+   echo json_encode($row);
+}
 
 //Because PDOStatement::execute returns a TRUE or FALSE value,
 //we can easily check to see if our insert was successful.
