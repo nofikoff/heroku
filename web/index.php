@@ -22,9 +22,9 @@ $sql = "INSERT INTO `test_table` (`id`, `name`, `phone`, `email`) VALUES (NULL, 
 //Prepare our statement.
 $statement = $pdo->prepare($sql);
 //Bind our values to our parameters (we called them :make and :model).
-$statement->bindValue(':name', 'Nissan');
-$statement->bindValue(':phone', 'Primera');
-$statement->bindValue(':email', 'Primera');
+$statement->bindValue(':name', 'ПЕТЯ');
+$statement->bindValue(':phone', '22222');
+$statement->bindValue(':email', 'xxxxxxx');
 
 
 //Execute the statement and insert our values.
