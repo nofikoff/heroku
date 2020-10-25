@@ -32,7 +32,7 @@ try {
 
 } catch (Exception $exception) {
 
-    if ($exception->getCode() === 23000) {
+    if ($exception->getCode() == 23000) {
         echo "Такая запись уже есть";
 
     } else print_r($exception);
