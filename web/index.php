@@ -31,7 +31,11 @@ try {
     $inserted = $statement->execute();
 
 } catch (Exception $exception) {
-    print_r($exception);
+
+    if ($exception->getCode() === 23000) {
+        echo "Такая запись уже есть";
+
+    } else print_r($exception);
 
 }
 
