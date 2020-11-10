@@ -1,3 +1,8 @@
+# Пример тестового проекта PHP + MySQL на Heroku
+Да пароли от БД прямо в коде на Гите - так надо!
+Любой студент может их взять и использовать
+
+
 # php-getting-started
 
 A barebones PHP app that makes use of the [Silex](http://silex.sensiolabs.org/) web framework, which can easily be deployed to Heroku.
